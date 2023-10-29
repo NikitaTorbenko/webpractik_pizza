@@ -27,7 +27,6 @@
   }
 
   &__title {
-    color: $black;
     font-feature-settings: 'clig' off, 'liga' off;
     font-size: 72px;
     font-weight: 900;
@@ -37,7 +36,6 @@
   }
 
   &__text {
-    color: $black;
     font-feature-settings: 'clig' off, 'liga' off;
     font-family: Roboto;
     font-size: 24px;

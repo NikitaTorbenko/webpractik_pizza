@@ -11,10 +11,17 @@
 * {
   font-family: 'Alegreya', sans-serif;
   transition: 0.3s;
+  color: $black;
 }
 
 *::-webkit-scrollbar {
   display: none;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .container {
