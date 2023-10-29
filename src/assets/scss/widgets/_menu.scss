@@ -7,6 +7,10 @@
   top: 0;
   left: 0;
 
+  &-active {
+    background-color: #fff;
+  }
+
   &-inner {
     display: flex;
     align-items: center;

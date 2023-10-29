@@ -1,15 +1,26 @@
-import React from 'react';
+import { useState, useEffect } from 'react';
 import '../assets/scss/widgets/_menu.scss';
 import { ReactComponent as Logo } from '../assets/icons/menu/Logo.svg';
 import { ReactComponent as Phone } from '../assets/icons/menu/Phone.svg';
 import { ReactComponent as Cart } from '../assets/icons/menu/Cart.svg';
 import { SelectMenu } from '../components/SelectMenu';
 
-const menuItems = ['Меню', 'О нас', 'Контакты'];
+interface MenuProps {
+  menuItems: string[];
+}
 
-export const Menu = () => {
+export const Menu = ({ menuItems }: MenuProps) => {
+  const [scroll, setScroll] = useState(0);
+
+  const handleScroll = () => setScroll(window.scrollY);
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <div className='menu'>
+    <div className={`menu ${scroll >= 156 ? 'menu-active' : ''}`}>
       <div className='container'>
         <div className='menu-inner'>
           <Logo />
