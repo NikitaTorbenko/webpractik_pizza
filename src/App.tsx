@@ -1,10 +1,14 @@
 import React from 'react';
+import { Header } from './widgets/Header';
+import { Footer } from './widgets/Footer';
+import { Main } from './widgets/Main';
 
 function App() {
   return (
     <div className='app'>
-      <p>Hello world</p>
-      <span>Hello world</span>
+      <Header />
+      <Main />
+      <Footer />
     </div>
   );
 }

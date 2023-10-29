@@ -1,0 +1,20 @@
+@import '../variables';
+
+.select-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__item {
+    color: $black;
+    font-size: 18px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    &--active {
+      color: $red;
+    }
+  }
+}

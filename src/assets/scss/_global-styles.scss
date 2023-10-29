@@ -10,4 +10,12 @@
 
 * {
   font-family: 'Alegreya', sans-serif;
+  transition: 0.3s;
+}
+
+.container {
+  width: 100%;
+  max-width: 1312px;
+  margin: 0 auto;
+  height: 100%;
 }
