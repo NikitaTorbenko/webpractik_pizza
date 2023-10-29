@@ -1,3 +1,5 @@
+@import '../variables';
+
 .menu-plug {
   height: 176px;
   // width: 100%;
@@ -5,6 +7,46 @@
 }
 
 .header {
+  position: relative;
+  margin-bottom: 270px;
+
+  &-background-image {
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+
+    &__img {
+      width: 100%;
+    }
+  }
+
   &-inner {
+    margin-top: 157px;
+  }
+
+  &__title {
+    color: $black;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-size: 72px;
+    font-weight: 900;
+    line-height: 1.25;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+  }
+
+  &__text {
+    color: $black;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Roboto;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.5;
+    margin-bottom: 32px;
+  }
+
+  &__btn {
+    padding: 18px 70px;
   }
 }
