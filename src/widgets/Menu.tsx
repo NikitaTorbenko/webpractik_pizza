@@ -28,6 +28,7 @@ export const Menu = ({ menuItems }: MenuProps) => {
             className='menu-menu'
             horizontalMargin={60}
             menuItems={menuItems}
+            initialActiveItem={1}
           />
           <div className='menu-phone'>
             <Phone />

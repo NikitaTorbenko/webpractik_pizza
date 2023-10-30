@@ -1,0 +1,167 @@
+@import '../variables';
+
+.pizza-item {
+  padding: 20px 32px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 5px;
+  background-color: $white;
+  box-shadow: 0px 2px 5px 0px rgba(165, 169, 176, 0.3);
+  height: 540px;
+  width: 304px;
+  position: relative;
+
+  // &__category {
+  //   opacity: 0;
+  // }
+
+  // &:hover {
+  //   &__category {
+  //     opacity: 1;
+  //     position: absolute;
+  //     top: 16px;
+  //     left: 16px;
+  //   }
+  // }
+
+  &__category {
+    opacity: 0;
+    position: absolute;
+    top: 16px;
+    left: 16px;
+  }
+
+  &__img {
+    border-radius: 50%;
+    box-shadow: 12px 12px 13.5px rgba(115, 105, 99, 0.5);
+    width: 200px;
+    height: 200px;
+    background: url('../../img/SizePizza.png');
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &--0 {
+      width: 145px;
+      height: 145px;
+    }
+    &--1 {
+      width: 170px;
+      height: 170px;
+    }
+    &--2 {
+      width: 200;
+      height: 200px;
+    }
+  }
+
+  &__title {
+    text-align: center;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 1.25;
+  }
+
+  &__description {
+    color: $gray;
+    text-align: center;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+
+  &-size {
+    &__title {
+      text-align: center;
+      font-feature-settings: 'clig' off, 'liga' off;
+      font-family: Roboto;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 1.5;
+      margin-bottom: 4px;
+    }
+
+    &-item {
+      border-radius: 2px;
+      background-color: inherit;
+      width: 58px;
+      padding: 2px 0;
+      cursor: pointer;
+      text-align: center;
+
+      span {
+        font-family: Roboto;
+        font-size: 12px;
+        font-weight: 700;
+        z-index: 11111;
+        position: relative;
+        line-height: 1.5;
+        color: #82909f;
+      }
+
+      &-line {
+        position: absolute;
+        display: block;
+        height: 22px;
+        width: 58px;
+        top: 2px;
+        left: 2px;
+
+        background-color: $white;
+        color: $black;
+        transition: all 350ms ease;
+      }
+    }
+  }
+
+  &-sizes {
+    position: relative;
+    background-color: $blackGray;
+    padding: 2px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    transition: all 350ms ease;
+  }
+
+  &__price {
+    text-align: center;
+    font-family: Roboto;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.25;
+  }
+
+  &__order-btn {
+    padding: 14px 70px;
+  }
+
+  &:hover {
+    box-shadow: 0px 2px 10px 0px rgba(165, 169, 176, 0.5);
+
+    .pizza-item__category {
+      opacity: 1;
+    }
+
+    .pizza-item__title {
+      color: $red;
+    }
+  }
+}
+
+@keyframes transformBadge {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(60px);
+  }
+}

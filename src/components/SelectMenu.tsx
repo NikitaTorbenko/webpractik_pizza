@@ -5,14 +5,16 @@ interface SelectMenuMenuProps {
   className: string;
   menuItems: string[];
   horizontalMargin?: number;
+  initialActiveItem: number;
 }
 
 export const SelectMenu = ({
   className,
+  initialActiveItem,
   menuItems,
   horizontalMargin,
 }: SelectMenuMenuProps) => {
-  const [activeItem, setActiveItem] = useState(1);
+  const [activeItem, setActiveItem] = useState(initialActiveItem);
   return (
     <div
       className={`select-menu ${className}`}
@@ -26,6 +28,7 @@ export const SelectMenu = ({
               : 'select-menu__item'
           }`}
           onClick={() => setActiveItem(index)}
+          key={index}
         >
           {el}
         </div>
