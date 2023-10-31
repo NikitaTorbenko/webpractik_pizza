@@ -25,10 +25,12 @@ const actions: IAction[] = [
 
 export const Action = () => {
   return (
-    <div className='action'>
-      {actions.map((el, index) => (
-        <ActionItem action={el} key={index} />
-      ))}
+    <div className='container'>
+      <div className='action'>
+        {actions.map((el, index) => (
+          <ActionItem action={el} key={index} />
+        ))}
+      </div>
     </div>
   );
 };

@@ -31,6 +31,7 @@ export const SelectMenu = ({
   horizontalMargin,
 }: SelectMenuMenuProps) => {
   const [activeItem, setActiveItem] = useState(initialActiveItem);
+
   return (
     <div
       className={`select-menu ${className}`}

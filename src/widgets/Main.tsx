@@ -1,14 +1,14 @@
 import React from 'react';
 import { Action } from './Action';
 import { ChoisePizzas } from './ChoisePizzas';
+import { DeliveryAndPayment } from './DeliveryAndPayment';
 
 export const Main = () => {
   return (
-    <main style={{ height: 9000 }} className='main'>
-      <div className='container'>
-        <Action />
-        <ChoisePizzas />
-      </div>
+    <main className='main'>
+      <Action />
+      <ChoisePizzas />
+      <DeliveryAndPayment />
     </main>
   );
 };
