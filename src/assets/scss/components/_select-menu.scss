@@ -35,6 +35,11 @@
     text-transform: uppercase;
     cursor: pointer;
 
+    &--small {
+      font-size: 16px;
+      font-weight: 700;
+    }
+
     &--active,
     &:hover {
       color: $red;

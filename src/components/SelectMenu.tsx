@@ -20,11 +20,13 @@ interface SelectMenuMenuProps {
   menuItems: menuItemsType[];
   horizontalMargin?: number;
   initialActiveItem: number;
+  scroll?: number;
 }
 
 export const SelectMenu = ({
   className,
   initialActiveItem,
+  scroll,
   menuItems,
   horizontalMargin,
 }: SelectMenuMenuProps) => {
@@ -45,7 +47,7 @@ export const SelectMenu = ({
               activeItem === index
                 ? 'select-menu__item select-menu__item--active'
                 : 'select-menu__item'
-            }`}
+            } ${scroll && scroll >= 156 ? 'select-menu__item--small' : ''}`}
           >
             {el.title}
           </span>

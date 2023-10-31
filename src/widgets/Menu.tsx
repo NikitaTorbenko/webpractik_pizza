@@ -24,33 +24,50 @@ export const Menu = ({ menuItems }: MenuProps) => {
     <div className={`menu ${scroll >= 156 ? 'menu-active' : ''}`}>
       <div className='container'>
         <div className='menu-inner'>
-          <Logo />
+          <Logo className={`${scroll >= 156 ? 'menu-logo' : ''}`} />
           <SelectMenu
+            scroll={scroll}
             className='menu-menu'
             horizontalMargin={60}
             menuItems={menuItems}
             initialActiveItem={1}
           />
           <div className='menu-phone'>
-            <Phone />
+            <Phone className={`${scroll >= 156 ? 'menu-icon' : ''}`} />
             <div className='menu-phone-inner'>
-              <div className='menu-phone__number'>+7 (918) 432-65-87</div>
+              <div
+                className={`menu-phone__number ${
+                  scroll >= 156 ? 'menu-phone__number--small' : ''
+                }`}
+              >
+                +7 (918) 432-65-87
+              </div>
               <div className='menu-phone__time'>Ежедневно с 9:00 до 23:00</div>
             </div>
           </div>
           <div className='menu-cart'>
             <div className='menu-cart-icon'>
-              <Cart />
+              <Cart className={`${scroll >= 156 ? 'menu-icon' : ''}`} />
               <div className='menu-cart-icon__counter'>0</div>
             </div>
             <div className='menu-cart-inner'>
-              <div className='menu-cart__title'>Ваш заказ</div>
+              <div
+                className={`menu-cart__title ${
+                  scroll >= 156 ? 'menu-cart__title--small' : ''
+                }`}
+              >
+                Ваш заказ
+              </div>
               <div className='menu-cart__subtitle'>
                 Итальянская и ещё 2 пиццы
               </div>
             </div>
           </div>
-          <div className='menu-lang'>En</div>
+          <div
+            className={`menu-lang ${scroll >= 156 ? 'menu-lang--small' : ''}`}
+          >
+            En
+          </div>
         </div>
       </div>
     </div>

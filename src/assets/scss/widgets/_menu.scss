@@ -6,16 +6,28 @@
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 100;
 
   &-active {
     background: $white;
     box-shadow: 0px 2px 5px 0px rgba(165, 169, 176, 0.3);
+    padding: 9px 0;
+  }
+
+  &-logo {
+    width: 68px;
+    height: 31px;
   }
 
   &-inner {
     display: flex;
     align-items: center;
     justify-content: space-between;
+  }
+
+  &-icon {
+    height: 32px;
+    width: 32px;
   }
 
   &-phone {
@@ -30,6 +42,11 @@
       font-weight: 900;
       letter-spacing: 1.333px;
       text-transform: uppercase;
+
+      &--small {
+        font-size: 18px;
+        font-weight: 700;
+      }
     }
 
     &__time {
@@ -78,6 +95,11 @@
       font-weight: 900;
       letter-spacing: 1px;
       text-transform: uppercase;
+
+      &--small {
+        font-size: 14px;
+        font-weight: 700;
+      }
     }
 
     &__subtitle {
@@ -101,5 +123,11 @@
     letter-spacing: 1px;
     text-transform: uppercase;
     line-height: 2.7;
+
+    &--small {
+      opacity: 0;
+      width: 42px;
+      height: 42px;
+    }
   }
 }
