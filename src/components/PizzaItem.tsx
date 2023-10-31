@@ -32,6 +32,7 @@ export const PizzaItem = ({
   sizes,
   title,
 }: Pizza) => {
+  const [isPressed, setIsPressed] = useState(false);
   const [index, setIndex] = useState<number>(1);
 
   const handleClick = (i: number) => {
@@ -57,23 +58,28 @@ export const PizzaItem = ({
           ></div>
           {sizes &&
             sizes.map((el, i) => (
-              <>
-                <div
-                  className={`pizza-item-size-item ${
-                    i === index ? 'pizza-item-size-item--active' : ''
-                  }`}
-                  onClick={() => handleClick(i)}
-                  key={i}
-                >
-                  <span>{el}</span>
-                </div>
-              </>
+              <div
+                className={`pizza-item-size-item ${
+                  i === index ? 'pizza-item-size-item--active' : ''
+                }`}
+                onClick={() => handleClick(i)}
+                key={i}
+              >
+                <span className={`${i === index ? 'active' : ''}`}>{el}</span>
+              </div>
             ))}
         </div>
       </div>
       {/* <div className='pizza-item__price'>от {price[0]} руб.</div> */}
       <div className='pizza-item__price'>от {price[index]} руб.</div>
-      <button className='btn pizza-item__order-btn'>Заказать</button>
+      <button
+        onClick={() => setIsPressed(true)}
+        className={`btn pizza-item__order-btn ${
+          isPressed ? 'btn--pressed' : ''
+        }`}
+      >
+        Заказать
+      </button>
     </div>
   );
 };

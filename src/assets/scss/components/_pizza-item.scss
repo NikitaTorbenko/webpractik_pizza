@@ -104,7 +104,18 @@
         color: #82909f;
       }
 
+      &:hover {
+        span {
+          color: $black;
+        }
+      }
+
+      .active {
+        color: $black;
+      }
+
       &-line {
+        border-radius: 2px;
         position: absolute;
         display: block;
         height: 22px;
@@ -153,15 +164,5 @@
     .pizza-item__title {
       color: $red;
     }
-  }
-}
-
-@keyframes transformBadge {
-  from {
-    transform: translateX(0);
-  }
-
-  to {
-    transform: translateX(60px);
   }
 }

@@ -32,6 +32,15 @@ img {
 }
 
 .btn {
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    transparent 50%,
+    $lightRed 50%,
+    $lightRed 100%
+  );
+  background-size: 100% 200%;
+
   background-color: $red;
   border-radius: 5px;
   color: $white;
@@ -39,4 +48,28 @@ img {
   font-weight: 900;
   letter-spacing: 1px;
   text-transform: uppercase;
+  transition: 0.5s;
+  border: 3px solid transparent;
+
+  &:hover {
+    background-position: 0 100%;
+  }
+
+  &:focus {
+    border: 3px solid #8fc9ff;
+  }
+}
+
+.btn--pressed {
+  background-color: #bf221e;
+}
+
+.btn--disable {
+  background-color: #dbdbdb;
+  color: #939393;
+  font-size: 18px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-radius: 5px;
 }
