@@ -3,8 +3,30 @@ import '../assets/scss/widgets/_choise-pizzas.scss';
 import { SelectMenu } from '../components/SelectMenu';
 import { pizzasApi } from '../redux';
 import { PizzaItem } from '../components/PizzaItem';
+import { menuItemsType } from '../types';
 
-const pizzaTypes = ['Все', 'Острые', 'Мясные', 'Сырные', 'Веганские'];
+const pizzaTypes: menuItemsType[] = [
+  {
+    title: 'Все',
+    icon: 1,
+  },
+  {
+    title: 'Острые',
+    icon: 2,
+  },
+  {
+    title: 'Мясные',
+    icon: 3,
+  },
+  {
+    title: 'Сырные',
+    icon: 4,
+  },
+  {
+    title: 'Веганские',
+    icon: 5,
+  },
+];
 
 export const ChoisePizzas = () => {
   const { data, isLoading, isError } = pizzasApi.useGetPizzasQuery();

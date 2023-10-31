@@ -4,9 +4,10 @@ import { ReactComponent as Logo } from '../assets/icons/menu/Logo.svg';
 import { ReactComponent as Phone } from '../assets/icons/menu/Phone.svg';
 import { ReactComponent as Cart } from '../assets/icons/menu/Cart.svg';
 import { SelectMenu } from '../components/SelectMenu';
+import { menuItemsType } from '../types';
 
 interface MenuProps {
-  menuItems: string[];
+  menuItems: menuItemsType[];
 }
 
 export const Menu = ({ menuItems }: MenuProps) => {

@@ -2,7 +2,17 @@ import '../assets/scss/widgets/_header.scss';
 import headerImg from '../assets/img/header.png';
 import { Menu } from './Menu';
 
-const menuItems = ['Меню', 'О нас', 'Контакты'];
+const menuItems = [
+  {
+    title: 'Меню',
+  },
+  {
+    title: 'О нас',
+  },
+  {
+    title: 'Контакты',
+  },
+];
 
 export const Header = () => {
   return (

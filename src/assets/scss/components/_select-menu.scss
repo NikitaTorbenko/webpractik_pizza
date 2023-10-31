@@ -5,6 +5,29 @@
   align-items: center;
   justify-content: center;
 
+  &__item-icon {
+    position: absolute;
+    // top: -100%;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: -1;
+  }
+
+  &__item-wrap {
+    position: relative;
+
+    &:hover {
+      .select-menu__item-icon {
+        opacity: 1;
+        position: absolute;
+        top: -217%;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  }
+
   &__item {
     font-size: 18px;
     font-weight: 900;
@@ -12,7 +35,8 @@
     text-transform: uppercase;
     cursor: pointer;
 
-    &--active {
+    &--active,
+    &:hover {
       color: $red;
     }
   }

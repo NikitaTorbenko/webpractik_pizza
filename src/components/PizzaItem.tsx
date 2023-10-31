@@ -1,23 +1,12 @@
-import React, {
-  CSSProperties,
-  ReactNode,
-  useEffect,
-  useRef,
-  useState,
-} from 'react';
+import { useState } from 'react';
 import '../assets/scss/components/_pizza-item.scss';
-import { Pizza } from '../types';
-import { ReactComponent as All } from '../assets/icons/pizza_item/all.svg';
+import { Pizza, selectIcon } from '../types';
 import { ReactComponent as Spicy } from '../assets/icons/pizza_item/spicy.svg';
 import { ReactComponent as Meat } from '../assets/icons/pizza_item/meat.svg';
 import { ReactComponent as Cheese } from '../assets/icons/pizza_item/cheese.svg';
 import { ReactComponent as Vegan } from '../assets/icons/pizza_item/vegan.svg';
 
-type obj = {
-  [key: number]: ReactNode;
-};
-
-const pizzaIcon: obj = {
+const pizzaIcon: selectIcon = {
   0: <Spicy />,
   1: <Meat />,
   2: <Cheese />,
@@ -41,7 +30,7 @@ export const PizzaItem = ({
 
   return (
     <div className='pizza-item'>
-      <div className='pizza-item__category'>{pizzaIcon[category]}</div>
+      <div className='pizza-item__category'>{pizzaIcon[category + 1]}</div>
       <div className='pizza-item__img'>
         <div className={`pizza-item__img--${index}`}>
           <img src={imageUrl} alt={title} />
