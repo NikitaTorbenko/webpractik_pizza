@@ -1,0 +1,54 @@
+.process {
+  margin: 100px auto 112px;
+  width: 864px;
+  display: flex;
+  flex-direction: column;
+
+  &-item {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    width: fit-content;
+    margin-bottom: 40px;
+
+    &:nth-child(even) {
+      display: flex;
+      flex-direction: row-reverse;
+      align-self: flex-end;
+    }
+
+    &__img {
+      width: 304px;
+      height: 304px;
+
+      img {
+        border-radius: 130px;
+      }
+    }
+
+    &-info {
+      max-width: 416px;
+      width: 100%;
+    }
+
+    &__title {
+      margin-bottom: 12px;
+      font-feature-settings: 'clig' off, 'liga' off;
+      font-size: 32px;
+      font-weight: 800;
+      line-height: 1.25;
+    }
+
+    &__description {
+      font-feature-settings: 'clig' off, 'liga' off;
+      font-family: Roboto;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 1.5;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
