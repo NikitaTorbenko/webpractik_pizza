@@ -30,7 +30,7 @@ export const PizzaItem = ({
 
   return (
     <div className='pizza-item'>
-      <div className='pizza-item__category'>{pizzaIcon[category + 1]}</div>
+      <div className='pizza-item__category'>{pizzaIcon[category]}</div>
       <div className='pizza-item__img'>
         <div className={`pizza-item__img--${index}`}>
           <img src={imageUrl} alt={title} />
