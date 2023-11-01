@@ -43,7 +43,7 @@
       "description": "",
       "sizes": [20, 30, 40],
       "price": [453, 561, 755],
-      "category": 3
+      "category": 0
     },
     {
       "id": "5",

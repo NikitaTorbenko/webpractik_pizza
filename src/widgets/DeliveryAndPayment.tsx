@@ -33,7 +33,7 @@ export const DeliveryAndPayment = () => {
           <h2 className='delivery__title'>Доставка и оплата</h2>
           <div className='delivery-order'>
             {deliveryList.map(el => (
-              <div className='delivery-order-item'>
+              <div className='delivery-order-item' key={el.description}>
                 <div className='delivery-order-item__icon'>
                   <img src={el.icon} alt='' />
                 </div>

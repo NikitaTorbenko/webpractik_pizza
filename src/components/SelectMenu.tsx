@@ -21,6 +21,8 @@ interface SelectMenuMenuProps {
   horizontalMargin?: number;
   initialActiveItem: number;
   scroll?: number;
+  // value?: number;
+  setValue?: (num: number) => void;
 }
 
 export const SelectMenu = ({
@@ -29,8 +31,15 @@ export const SelectMenu = ({
   scroll,
   menuItems,
   horizontalMargin,
+  // value,
+  setValue,
 }: SelectMenuMenuProps) => {
   const [activeItem, setActiveItem] = useState(initialActiveItem);
+
+  const onClickHandler = (index: number) => {
+    setActiveItem(index);
+    setValue && setValue(index);
+  };
 
   return (
     <div
@@ -40,7 +49,7 @@ export const SelectMenu = ({
       {menuItems.map((el, index) => (
         <div
           className='select-menu__item-wrap'
-          onClick={() => setActiveItem(index)}
+          onClick={() => onClickHandler(index)}
           key={index}
         >
           <span

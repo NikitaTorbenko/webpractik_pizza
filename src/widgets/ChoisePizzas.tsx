@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../assets/scss/widgets/_choise-pizzas.scss';
 import { SelectMenu } from '../components/SelectMenu';
 import { pizzasApi } from '../redux';
@@ -30,12 +30,17 @@ const pizzaTypes: menuItemsType[] = [
 
 export const ChoisePizzas = () => {
   const { data, isLoading, isError } = pizzasApi.useGetPizzasQuery();
+  const [typePizza, setTypePizza] = useState(0);
+
+  console.log('typePizza', typePizza);
+  console.log('data', data);
 
   return (
     <div className='container'>
       <div className='choise-pizzas'>
         <h2 className='choise-pizzas__title'>Выберите пиццу</h2>
         <SelectMenu
+          setValue={setTypePizza}
           className='choise-pizzas-types'
           menuItems={pizzaTypes}
           horizontalMargin={40}
@@ -46,7 +51,13 @@ export const ChoisePizzas = () => {
             <h2 style={{ textAlign: 'center' }}>Загрузка</h2>
           )}
           {isError && <h2 style={{ textAlign: 'center' }}>Произошла ошибка</h2>}
-          {data && data.map(el => <PizzaItem {...el} key={el.id} />)}
+          {data &&
+            data
+              .filter(el => {
+                if (!typePizza) return true;
+                return el.category + 1 === typePizza;
+              })
+              .map(el => <PizzaItem {...el} key={el.id} />)}
         </div>
       </div>
     </div>
