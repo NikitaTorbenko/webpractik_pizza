@@ -53,10 +53,7 @@ export const ChoisePizzas = () => {
           {isError && <h2 style={{ textAlign: 'center' }}>Произошла ошибка</h2>}
           {data &&
             data
-              .filter(el => {
-                if (!typePizza) return true;
-                return el.category + 1 === typePizza;
-              })
+              .filter(el => (typePizza ? el.category + 1 === typePizza : el))
               .map(el => <PizzaItem {...el} key={el.id} />)}
         </div>
       </div>
