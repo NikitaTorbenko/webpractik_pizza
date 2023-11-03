@@ -9,7 +9,7 @@ export const Main = () => {
     <main className='main'>
       <Action />
       <ChoisePizzas />
-      {/* <DeliveryAndPayment /> */}
+      <DeliveryAndPayment />
       {/* <Process /> */}
     </main>
   );
