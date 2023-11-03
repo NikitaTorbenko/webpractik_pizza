@@ -9,7 +9,7 @@
   z-index: 100;
 
   &-active {
-    background: $white;
+    background-color: $white;
     box-shadow: 0px 2px 5px 0px rgba(165, 169, 176, 0.3);
     padding: 9px 0;
   }
@@ -28,6 +28,11 @@
   &-icon {
     height: 32px;
     width: 32px;
+
+    @media (max-width: $desctopScreens) {
+      width: 40px;
+      height: 40px;
+    }
   }
 
   &-phone {
@@ -129,5 +134,41 @@
       width: 42px;
       height: 42px;
     }
+
+    &-tablet {
+      &--lang {
+        width: 48px;
+        height: 48px;
+      }
+    }
   }
+
+  @media (max-width: $desctopScreens) {
+    background-color: $white;
+    padding: 20px 0;
+  }
+}
+
+.tabletScreen {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &-item {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+
+    &-wrap {
+      display: flex;
+      align-items: center;
+      gap: 70px;
+    }
+  }
+}
+
+.menu-logo-tablet {
+  width: 130px;
+  height: 60px;
 }

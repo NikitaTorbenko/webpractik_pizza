@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import '../assets/scss/components/_select-menu.scss';
+import { useScroll } from '../hooks/useScroll';
 import { menuItemsType, selectIcon } from '../types';
 import { ReactComponent as All } from '../assets/icons/pizza_item/all.svg';
 import { ReactComponent as Spicy } from '../assets/icons/pizza_item/spicy.svg';
@@ -18,23 +19,22 @@ const pizzaIcon: selectIcon = {
 interface SelectMenuMenuProps {
   className: string;
   menuItems: menuItemsType[];
-  horizontalMargin?: number;
+  horizontalMargin: number;
   initialActiveItem: number;
-  scroll?: number;
-  // value?: number;
   setValue?: (num: number) => void;
+  isMenu?: boolean;
 }
 
 export const SelectMenu = ({
   className,
   initialActiveItem,
-  scroll,
   menuItems,
   horizontalMargin,
-  // value,
   setValue,
+  isMenu,
 }: SelectMenuMenuProps) => {
   const [activeItem, setActiveItem] = useState(initialActiveItem);
+  const scroll = useScroll();
 
   const onClickHandler = (index: number) => {
     setActiveItem(index);
@@ -57,7 +57,11 @@ export const SelectMenu = ({
               activeItem === index
                 ? 'select-menu__item select-menu__item--active'
                 : 'select-menu__item'
-            } ${scroll && scroll >= 156 ? 'select-menu__item--small' : ''}`}
+            } ${
+              scroll && isMenu && scroll >= 156
+                ? 'select-menu__item--small'
+                : ''
+            }`}
           >
             {el.title}
           </span>

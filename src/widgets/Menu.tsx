@@ -1,12 +1,9 @@
-import { useState, useEffect } from 'react';
 import '../assets/scss/widgets/_menu.scss';
-import { ReactComponent as Logo } from '../assets/icons/menu/Logo.svg';
-import { ReactComponent as Phone } from '../assets/icons/menu/Phone.svg';
-import { ReactComponent as Cart } from '../assets/icons/menu/Cart.svg';
-import { ReactComponent as MenuIcon } from '../assets/icons/menu/menuIcon.svg';
-import { SelectMenu } from '../components/SelectMenu';
 import { menuItemsType } from '../types';
 import { useWindowSize } from '../hooks/useWindowSize';
+import { useScroll } from '../hooks/useScroll';
+import { LargeScreen } from '../components/menuScreens/LargeScreen';
+import { TabletScreen } from '../components/menuScreens/TabletScreen';
 
 interface MenuProps {
   menuItems: menuItemsType[];
@@ -15,78 +12,24 @@ interface MenuProps {
 const tableWidth = 1250;
 
 export const Menu = ({ menuItems }: MenuProps) => {
-  const [scroll, setScroll] = useState(0);
-
   const dimensions = useWindowSize();
-
-  const handleScroll = () => setScroll(window.scrollY);
-
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  const scroll = useScroll();
 
   return (
-    <div className={`menu ${scroll >= 156 ? 'menu-active' : ''}`}>
+    <div
+      className={`menu ${
+        dimensions.width >= 1250 && scroll >= 156 ? 'menu-active' : ''
+      }`}
+    >
       <div className='container'>
         <div className='menu-inner'>
-          <Logo className={`${scroll >= 156 ? 'menu-logo' : ''}`} />
-          {dimensions.width >= tableWidth && (
-            <SelectMenu
-              scroll={scroll}
-              className='menu-menu'
-              horizontalMargin={60}
-              menuItems={menuItems}
-              initialActiveItem={1}
-            />
+          {dimensions.width >= tableWidth ? (
+            <LargeScreen menuItems={menuItems} />
+          ) : (
+            <>
+              <TabletScreen />
+            </>
           )}
-          <div className='menu-phone'>
-            <Phone className={`${scroll >= 156 ? 'menu-icon' : ''}`} />
-            {dimensions.width >= tableWidth && (
-              <div className='menu-phone-inner'>
-                <div
-                  className={`menu-phone__number ${
-                    scroll >= 156 ? 'menu-phone__number--small' : ''
-                  }`}
-                >
-                  +7 (918) 432-65-87
-                </div>
-                <div className='menu-phone__time'>
-                  Ежедневно с 9:00 до 23:00
-                </div>
-              </div>
-            )}
-          </div>
-          <div className='menu-cart'>
-            <div className='menu-cart-icon'>
-              <Cart className={`${scroll >= 156 ? 'menu-icon' : ''}`} />
-              <div className='menu-cart-icon__counter'>0</div>
-            </div>
-            {dimensions.width >= tableWidth && (
-              <div className='menu-cart-inner'>
-                <div
-                  className={`menu-cart__title ${
-                    scroll >= 156 ? 'menu-cart__title--small' : ''
-                  }`}
-                >
-                  Ваш заказ
-                </div>
-                <div className='menu-cart__subtitle'>
-                  Итальянская и ещё 2 пиццы
-                </div>
-              </div>
-            )}
-          </div>
-          <div
-            className={`menu-lang ${
-              dimensions.width >= tableWidth && scroll >= 156
-                ? 'menu-lang--small'
-                : ''
-            }`}
-          >
-            En
-          </div>
-          {dimensions.width <= tableWidth && <MenuIcon />}
         </div>
       </div>
     </div>
