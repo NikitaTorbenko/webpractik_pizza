@@ -7,8 +7,8 @@ function App() {
   return (
     <div style={{ height: 2000 }} className='app'>
       <Header />
-      {/* <Main />
-      <Footer /> */}
+      <Main />
+      {/* <Footer /> */}
     </div>
   );
 }

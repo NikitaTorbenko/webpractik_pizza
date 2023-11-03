@@ -8,9 +8,9 @@ export const Main = () => {
   return (
     <main className='main'>
       <Action />
-      <ChoisePizzas />
+      {/* <ChoisePizzas />
       <DeliveryAndPayment />
-      <Process />
+      <Process /> */}
     </main>
   );
 };

@@ -1,11 +1,14 @@
+@import '../variables';
+
 .action {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
+  gap: 20px;
 
   &-item {
+    width: 416px;
+
     &__img {
-      width: 416px;
       height: 247px;
     }
 
@@ -23,6 +26,25 @@
       font-size: 14px;
       font-weight: 400;
       line-height: 1.5;
+    }
+  }
+
+  @media (max-width: $desctopScreens) {
+    &-item {
+      width: 236px;
+
+      &__img {
+        width: 236px;
+        height: 140px;
+      }
+
+      &__title {
+        font-size: 20px;
+      }
+
+      &__text {
+        font-size: 14px;
+      }
     }
   }
 }
