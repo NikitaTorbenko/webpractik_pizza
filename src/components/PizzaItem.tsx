@@ -59,7 +59,6 @@ export const PizzaItem = ({
             ))}
         </div>
       </div>
-      {/* <div className='pizza-item__price'>от {price[0]} руб.</div> */}
       <div className='pizza-item__price'>от {price[index]} руб.</div>
       <button
         onClick={() => setIsPressed(true)}
@@ -72,4 +71,3 @@ export const PizzaItem = ({
     </div>
   );
 };
-// "imageUrl": "https://dodopizza.azureedge.net/static/Img/Products/f035c7f46c0844069722f2bb3ee9f113_584x584.jpeg",
