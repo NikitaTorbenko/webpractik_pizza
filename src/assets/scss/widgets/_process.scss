@@ -1,6 +1,8 @@
+@import '../variables';
+
 .process {
   margin: 100px auto 112px;
-  width: 864px;
+  max-width: 864px;
   display: flex;
   flex-direction: column;
 
@@ -8,7 +10,8 @@
     display: flex;
     align-items: center;
     gap: 32px;
-    width: fit-content;
+    max-width: fit-content;
+    width: 100%;
     margin-bottom: 40px;
 
     &:nth-child(even) {
@@ -20,9 +23,18 @@
     &__img {
       width: 304px;
       height: 304px;
+      min-width: 304px;
+      min-height: 304px;
 
       img {
-        border-radius: 130px;
+        border-radius: 42.76%;
+      }
+
+      @media (max-width: $desctopScreens) {
+        width: 250px;
+        height: 250px;
+        min-width: 250px;
+        min-height: 250px;
       }
     }
 
@@ -37,6 +49,10 @@
       font-size: 32px;
       font-weight: 800;
       line-height: 1.25;
+
+      @media (max-width: $desctopScreens) {
+        font-size: 24px;
+      }
     }
 
     &__description {
@@ -47,8 +63,17 @@
       line-height: 1.5;
     }
 
+    @media (max-width: $desctopScreens) {
+      gap: 37px;
+      margin-bottom: 12px;
+    }
+
     &:last-child {
       margin-bottom: 0;
     }
+  }
+
+  @media (max-width: $desctopScreens) {
+    margin: 80px auto 80px;
   }
 }
