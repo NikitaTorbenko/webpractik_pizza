@@ -9,6 +9,12 @@
     line-height: 1.25;
     letter-spacing: 1px;
     margin-bottom: 13px;
+
+    @media (max-width: $desctopScreens) {
+      text-align: center;
+      font-size: 40px;
+      line-height: 1.5;
+    }
   }
 
   &__subtitle {
@@ -19,9 +25,19 @@
     font-weight: 800;
     line-height: 1.25;
     margin-bottom: 46px;
+
+    @media (max-width: $desctopScreens) {
+      font-size: 20px;
+      font-weight: 900;
+      line-height: 1.5;
+    }
   }
 
   &__logo {
+    @media (max-width: $desctopScreens) {
+      width: 89.888px;
+      height: 41.47px;
+    }
   }
 
   &-bottom {
@@ -38,6 +54,10 @@
       display: flex;
       align-items: center;
       gap: 100px;
+
+      @media (max-width: $desctopScreens) {
+        gap: 80px;
+      }
     }
 
     &-contact {
@@ -48,6 +68,12 @@
         font-weight: 800;
         line-height: 1.25;
         margin-bottom: 6px;
+        text-transform: uppercase;
+
+        @media (max-width: $desctopScreens) {
+          font-weight: 900;
+          letter-spacing: 1.333px;
+        }
       }
 
       &__time {
