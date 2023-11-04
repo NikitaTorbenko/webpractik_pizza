@@ -34,12 +34,14 @@
 
 .pizzas-list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(304px, 1fr));
+  // grid-template-columns: repeat(auto-fill, minmax(304px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   justify-items: center;
   gap: 32px;
 
   @media (max-width: $desctopScreens) {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(236px, 1fr));
+    // grid-template-columns: repeat(auto-fill, minmax(236px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
   }
 }

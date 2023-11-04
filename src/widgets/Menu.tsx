@@ -9,7 +9,7 @@ export interface MenuProps {
   menuItems: menuItemsType[];
 }
 
-const tableWidth = 1250;
+const tableWidth = 1380;
 
 export const Menu = ({ menuItems }: MenuProps) => {
   const dimensions = useWindowSize();
@@ -18,7 +18,7 @@ export const Menu = ({ menuItems }: MenuProps) => {
   return (
     <div
       className={`menu ${
-        dimensions.width >= 1250 && scroll >= 156 ? 'menu-active' : ''
+        dimensions.width >= tableWidth && scroll >= 156 ? 'menu-active' : ''
       }`}
     >
       <div className='container'>
