@@ -1,11 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../../assets/scss/widgets/_menu.scss';
 import { useScroll } from '../../hooks/useScroll';
 import { ReactComponent as Phone } from '../../assets/icons/menu/Phone.svg';
 import { ReactComponent as Logo } from '../../assets/icons/menu/Logo.svg';
-import { ReactComponent as Cart } from '../../assets/icons/menu/Cart.svg';
+import { ReactComponent as CartIcon } from '../../assets/icons/menu/Cart.svg';
 import { SelectMenu } from '../SelectMenu';
 import { menuItemsType } from '../../types';
+import { Cart } from '../../widgets/Cart';
 
 interface LargeScreenProps {
   menuItems: menuItemsType[];
@@ -13,6 +14,7 @@ interface LargeScreenProps {
 
 export const LargeScreen = ({ menuItems }: LargeScreenProps) => {
   const scroll = useScroll();
+  const [isActiveCart, setIsActiveCart] = useState(false);
 
   return (
     <>
@@ -38,8 +40,10 @@ export const LargeScreen = ({ menuItems }: LargeScreenProps) => {
         </div>
       </div>
       <div className='menu-cart'>
-        <div className='menu-cart-icon'>
-          <Cart className={`${scroll >= 156 ? 'menu-icon' : ''}`} />
+        {isActiveCart && <Cart setIsActive={setIsActiveCart} />}
+
+        <div onClick={() => setIsActiveCart(true)} className='menu-cart-icon'>
+          <CartIcon className={`${scroll >= 156 ? 'menu-icon' : ''}`} />
           <div className='menu-cart-icon__counter'>0</div>
         </div>
         <div className='menu-cart-inner'>

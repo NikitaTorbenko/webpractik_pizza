@@ -2,15 +2,17 @@ import React, { useState } from 'react';
 import '../../assets/scss/widgets/_menu.scss';
 import { useScroll } from '../../hooks/useScroll';
 import { ReactComponent as Phone } from '../../assets/icons/menu/Phone.svg';
-import { ReactComponent as Cart } from '../../assets/icons/menu/Cart.svg';
+import { ReactComponent as CartIcon } from '../../assets/icons/menu/Cart.svg';
 import { ReactComponent as MenuIcon } from '../../assets/icons/menu/menuIcon.svg';
 import { ReactComponent as Logo } from '../../assets/icons/menu/Logo.svg';
 import { Sidebar } from './Sidebar';
 import { MenuProps } from '../../widgets/Menu';
+import { Cart } from '../../widgets/Cart';
 
 export const TabletScreen = ({ menuItems }: MenuProps) => {
   const scroll = useScroll();
   const [isActiveBurger, setIsActiveBurger] = useState(false);
+  const [isActiveCart, setIsActiveCart] = useState(false);
 
   return (
     <>
@@ -22,8 +24,13 @@ export const TabletScreen = ({ menuItems }: MenuProps) => {
               <Phone className='menu-icon' />
             </div>
             <div className='menu-cart'>
-              <div className='menu-cart-icon'>
-                <Cart className='menu-icon' />
+              {isActiveCart && <Cart setIsActive={setIsActiveCart} />}
+
+              <div
+                onClick={() => setIsActiveCart(true)}
+                className='menu-cart-icon'
+              >
+                <CartIcon className='menu-icon' />
                 <div className='menu-cart-icon__counter'>0</div>
               </div>
             </div>
