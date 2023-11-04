@@ -31,11 +31,14 @@
   animation-fill-mode: forwards;
 }
 
+.modalBacground {
+}
+
 .modal {
   cursor: default;
   right: 0;
   bottom: 0;
-  display: 'flex';
+  display: flex;
   position: fixed;
   top: 0;
   left: 0;
@@ -49,13 +52,14 @@
   height: 100vh;
   height: calc(var(--vh, 1vh) * 100);
 
-  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.9);
+  opacity: 1;
 }
 
 .modalActive {
-  opacity: 0.9;
   z-index: 100;
   pointer-events: all;
+
   @media (max-width: 425px) {
     z-index: 10000000;
   }
@@ -74,6 +78,7 @@
   // transform: scale(0.5);
   // transition: 0.4s;
   position: relative;
+
   &::-webkit-scrollbar {
     display: none;
   }
@@ -117,6 +122,7 @@
 
 .modalHeader,
 .modalHeaderSmallBottom {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -147,4 +153,95 @@
 .modalTest {
   width: 470px;
   height: fit-content;
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+
+  .total-price {
+    align-self: flex-end;
+
+    font-size: 18px;
+    font-weight: 800;
+
+    span {
+      font-size: 32px;
+      font-weight: 800;
+      margin-left: 20px;
+    }
+  }
+
+  .modal-contact {
+    &__title {
+      margin-top: 15px;
+      font-size: 18px;
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+  }
+}
+
+.modal-input {
+  &-top,
+  &-bottom {
+    &-block {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    width: 304px;
+    padding: 13px 12px;
+    border-radius: 4px;
+    border: 1px solid #c4c7ca;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.125;
+    margin-bottom: 24px;
+
+    &::placeholder {
+      color: #a6a6a6;
+    }
+  }
+
+  &-bottom {
+    width: 100%;
+  }
+}
+
+.payment-method {
+  margin: 32px 0;
+
+  &__title {
+    font-size: 18px;
+    font-weight: 800;
+    margin-bottom: 14px;
+  }
+
+  &-item {
+    margin-bottom: 18px;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.125;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.payment__btn {
+  padding: 14px 43px;
+}
+
+.modal-footer {
+  margin-top: 23px;
+  color: #848a9a;
+  font-family: Roboto;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.5;
 }

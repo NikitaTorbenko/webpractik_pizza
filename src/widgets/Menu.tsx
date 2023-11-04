@@ -26,9 +26,7 @@ export const Menu = ({ menuItems }: MenuProps) => {
           {dimensions.width >= tableWidth ? (
             <LargeScreen menuItems={menuItems} />
           ) : (
-            <>
-              <TabletScreen menuItems={menuItems} />
-            </>
+            <TabletScreen menuItems={menuItems} />
           )}
         </div>
       </div>

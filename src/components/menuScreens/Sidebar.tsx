@@ -24,8 +24,10 @@ export const Sidebar = ({
         <div className='sidebarTop'>
           <CloseSidebar onClick={() => setIsActiveBurger(false)} />
           <div className='menu-navbar'>
-            {menuItems.map(el => (
-              <div className='menu-navbar__item'>{el.title}</div>
+            {menuItems.map((el, index) => (
+              <div className='menu-navbar__item' key={index}>
+                {el.title}
+              </div>
             ))}
           </div>
         </div>
