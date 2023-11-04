@@ -1,13 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../../assets/scss/widgets/_menu.scss';
 import { useScroll } from '../../hooks/useScroll';
 import { ReactComponent as Phone } from '../../assets/icons/menu/Phone.svg';
 import { ReactComponent as Cart } from '../../assets/icons/menu/Cart.svg';
 import { ReactComponent as MenuIcon } from '../../assets/icons/menu/menuIcon.svg';
 import { ReactComponent as Logo } from '../../assets/icons/menu/Logo.svg';
+import { Sidebar } from './Sidebar';
+import { MenuProps } from '../../widgets/Menu';
 
-export const TabletScreen = () => {
+export const TabletScreen = ({ menuItems }: MenuProps) => {
   const scroll = useScroll();
+  const [isActiveBurger, setIsActiveBurger] = useState(false);
 
   return (
     <>
@@ -33,7 +36,12 @@ export const TabletScreen = () => {
             >
               En
             </div>
-            <MenuIcon />
+            <Sidebar
+              menuItems={menuItems}
+              isActiveBurger={isActiveBurger}
+              setIsActiveBurger={setIsActiveBurger}
+            />
+            <MenuIcon onClick={() => setIsActiveBurger(true)} />
           </div>
         </div>
       </div>

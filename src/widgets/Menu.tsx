@@ -5,7 +5,7 @@ import { useScroll } from '../hooks/useScroll';
 import { LargeScreen } from '../components/menuScreens/LargeScreen';
 import { TabletScreen } from '../components/menuScreens/TabletScreen';
 
-interface MenuProps {
+export interface MenuProps {
   menuItems: menuItemsType[];
 }
 
@@ -27,7 +27,7 @@ export const Menu = ({ menuItems }: MenuProps) => {
             <LargeScreen menuItems={menuItems} />
           ) : (
             <>
-              <TabletScreen />
+              <TabletScreen menuItems={menuItems} />
             </>
           )}
         </div>
