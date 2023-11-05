@@ -185,13 +185,52 @@
 .modal-input {
   &-top,
   &-bottom {
+    &-wrap {
+      position: relative;
+      width: 304px;
+
+      & span {
+        position: absolute;
+        left: 0;
+        margin-left: 13px;
+        margin-top: 13px;
+        pointer-events: none;
+        color: #a6a6a6;
+      }
+
+      // & .modal-input-top:valid ~ span {
+      //   color: #c4c7ca;
+      // }
+      // & .modal-input-top:valid {
+      //   border: 1px solid #c4c7ca;
+      // }
+
+      & .modal-input-top:valid,
+      & .modal-input-top:focus {
+        border: 1px solid #3f8fe5;
+      }
+
+      & .modal-input-top:valid ~ span,
+      & .modal-input-top:focus ~ span {
+        transform: translateY(-27px);
+        background-color: #fff;
+        padding: 4px;
+
+        color: #3f8fe5;
+        font-family: Roboto;
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 1.38;
+      }
+    }
+
     &-block {
       display: flex;
       align-items: center;
       justify-content: space-between;
     }
 
-    width: 304px;
+    width: 100%;
     padding: 13px 12px;
     border-radius: 4px;
     border: 1px solid #c4c7ca;

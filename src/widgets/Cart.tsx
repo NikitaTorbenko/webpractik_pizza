@@ -100,22 +100,23 @@ export const Cart = ({ setIsActive }: CartProps) => {
           <div className='modal-contact'>
             <div className='modal-contact__title'>Контакты</div>
             <div className='modal-input-top-block'>
-              <input
-                className='modal-input-top'
-                placeholder='Ваше имя'
-                type='text'
-              />
-              <input
-                className='modal-input-top'
-                placeholder='Телефон'
-                type='text'
-              />
+              <div className='modal-input-top-wrap'>
+                <input className='modal-input-top' type='text' required />
+                <span>Ваше имя</span>
+              </div>
+              <div className='modal-input-top-wrap'>
+                <input className='modal-input-top' type='text' required />
+                <span>Телефон</span>
+              </div>
             </div>
-            <input
-              className='modal-input-bottom'
-              placeholder='Адрес доставки'
-              type='text'
-            />
+            <div style={{ width: '100%' }} className='modal-input-top-wrap'>
+              <input
+                className='modal-input-top modal-input-bottom'
+                type='text'
+                required
+              />
+              <span>Адрес доставки</span>
+            </div>
             <div className='payment-method'>
               <div className='payment-method__title'>Способ оплаты</div>
               <div className='payment-method-item'>
