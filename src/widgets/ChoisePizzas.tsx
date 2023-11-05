@@ -56,10 +56,10 @@ export const ChoisePizzas = () => {
             <h2 style={{ textAlign: 'center' }}>Загрузка</h2>
           )}
           {isError && <h2 style={{ textAlign: 'center' }}>Произошла ошибка</h2>}
-          {/* {data &&
+          {data &&
             data
               .filter(el => (typePizza ? el.category + 1 === typePizza : el))
-              .map(el => <PizzaItem {...el} key={el.id} />)} */}
+              .map(el => <PizzaItem {...el} key={el.id} />)}
         </div>
       </div>
     </div>
