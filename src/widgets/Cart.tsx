@@ -119,10 +119,26 @@ export const Cart = ({ setIsActive }: CartProps) => {
             <div className='payment-method'>
               <div className='payment-method__title'>Способ оплаты</div>
               <div className='payment-method-item'>
-                Оплата наличными или картой курьеру
+                <input
+                  className='payment-method-item__input'
+                  type='radio'
+                  name='male'
+                  id='radio_1'
+                />
+                <label className='payment-method-item__label' htmlFor='radio_1'>
+                  Оплата наличными или картой курьеру
+                </label>
               </div>
               <div className='payment-method-item'>
-                Оплата картой онлайн на сайте
+                <input
+                  className='payment-method-item__input'
+                  type='radio'
+                  name='male'
+                  id='radio_2'
+                />
+                <label className='payment-method-item__label' htmlFor='radio_2'>
+                  Оплата картой онлайн на сайте
+                </label>
               </div>
             </div>
             <button className='btn payment__btn'>Оформить заказ</button>
