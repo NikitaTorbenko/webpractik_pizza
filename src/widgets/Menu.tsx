@@ -4,12 +4,14 @@ import { useWindowSize } from '../hooks/useWindowSize';
 import { useScroll } from '../hooks/useScroll';
 import { LargeScreen } from '../components/menuScreens/LargeScreen';
 import { TabletScreen } from '../components/menuScreens/TabletScreen';
+import { MobileScreen } from '../components/menuScreens/MobileScreen';
 
 export interface MenuProps {
   menuItems: menuItemsType[];
 }
 
 const tableWidth = 1380;
+const mobileWidth = 560;
 
 export const Menu = ({ menuItems }: MenuProps) => {
   const dimensions = useWindowSize();
@@ -25,8 +27,10 @@ export const Menu = ({ menuItems }: MenuProps) => {
         <div className='menu-inner'>
           {dimensions.width >= tableWidth ? (
             <LargeScreen menuItems={menuItems} />
-          ) : (
+          ) : dimensions.width >= mobileWidth ? (
             <TabletScreen menuItems={menuItems} />
+          ) : (
+            <MobileScreen menuItems={menuItems} />
           )}
         </div>
       </div>

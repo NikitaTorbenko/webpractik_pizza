@@ -6,6 +6,10 @@
   @media (max-width: $desctopScreens) {
     height: 170px;
   }
+
+  @media (max-width: $mobileScreens) {
+    height: 83px;
+  }
 }
 
 .header {
@@ -28,6 +32,12 @@
       position: absolute;
       top: 133px;
     }
+
+    @media (max-width: $mobileScreens) {
+      position: static;
+      margin-left: 0;
+      width: 100%;
+    }
   }
 
   &-inner {
@@ -35,6 +45,14 @@
 
     @media (max-width: $desctopScreens) {
       margin-top: 31px;
+    }
+
+    @media (max-width: $mobileScreens) {
+      margin-top: 20px;
+      // display: flex;
+      // flex-direction: column;
+      // align-items: center;
+      // justify-content: center;
     }
   }
 
@@ -49,6 +67,11 @@
     @media (max-width: $desctopScreens) {
       font-size: 52px;
     }
+
+    @media (max-width: $mobileScreens) {
+      font-size: 40px;
+      text-align: center;
+    }
   }
 
   &__text {
@@ -62,13 +85,34 @@
     @media (max-width: $desctopScreens) {
       font-size: 18px;
     }
+
+    @media (max-width: $mobileScreens) {
+      font-size: 18px;
+      text-align: center;
+      font-size: 16px;
+
+      br {
+        display: none;
+      }
+    }
   }
 
   &__btn {
     padding: 18px 70px;
+    white-space: nowrap;
+
+    @media (max-width: $mobileScreens) {
+      display: block;
+      margin: 0 auto;
+    }
   }
 
   @media (max-width: $desctopScreens) {
     margin-bottom: 110px;
+  }
+
+  @media (max-width: $mobileScreens) {
+    margin-bottom: 60px;
+    width: 100%;
   }
 }

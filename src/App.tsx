@@ -5,10 +5,10 @@ import { Main } from './widgets/Main';
 
 function App() {
   return (
-    <div style={{ height: 2000 }} className='app'>
+    <div className='app'>
       <Header />
-      <Main />
-      <Footer />
+      {/* <Main />
+      <Footer /> */}
     </div>
   );
 }

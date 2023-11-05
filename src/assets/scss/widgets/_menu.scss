@@ -147,6 +147,11 @@
     background-color: $white;
     padding: 20px 0;
   }
+
+  @media (max-width: $mobileScreens) {
+    background-color: $white;
+    padding: 15px 0 20px;
+  }
 }
 
 .tabletScreen {
@@ -171,6 +176,11 @@
 .menu-logo-tablet {
   width: 130px;
   height: 60px;
+
+  @media (max-width: $mobileScreens) {
+    width: 85px;
+    height: 39px;
+  }
 }
 
 // ================= MOBILE ============

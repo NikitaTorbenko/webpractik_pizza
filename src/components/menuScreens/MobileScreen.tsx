@@ -1,5 +1,4 @@
-import { useState } from 'react';
-import '../../assets/scss/widgets/_menu.scss';
+import React, { useState } from 'react';
 import { useScroll } from '../../hooks/useScroll';
 import { ReactComponent as Phone } from '../../assets/icons/menu/Phone.svg';
 import { ReactComponent as CartIcon } from '../../assets/icons/menu/Cart.svg';
@@ -9,7 +8,7 @@ import { Sidebar } from './Sidebar';
 import { MenuProps } from '../../widgets/Menu';
 import { Cart } from '../../widgets/Cart';
 
-export const TabletScreen = ({ menuItems }: MenuProps) => {
+export const MobileScreen = ({ menuItems }: MenuProps) => {
   const scroll = useScroll();
   const [isActiveBurger, setIsActiveBurger] = useState(false);
   const [isActiveCart, setIsActiveCart] = useState(false);
@@ -32,15 +31,6 @@ export const TabletScreen = ({ menuItems }: MenuProps) => {
               <CartIcon className='menu-icon' />
               <div className='menu-cart-icon__counter'>0</div>
             </div>
-          </div>
-        </div>
-        <div className='tabletScreen-item'>
-          <div
-            className={`menu-lang ${
-              scroll >= 156 ? 'menu-lang-tablet--small' : ''
-            }`}
-          >
-            En
           </div>
           <Sidebar
             menuItems={menuItems}

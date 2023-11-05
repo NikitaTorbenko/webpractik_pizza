@@ -34,6 +34,10 @@ img {
   margin: 0 auto;
   height: 100%;
   padding: 0 31px;
+
+  @media (max-width: $mobileScreens) {
+    padding: 0 16px;
+  }
 }
 
 .btn {
@@ -62,6 +66,10 @@ img {
 
   &:focus {
     border: 3px solid #8fc9ff;
+  }
+
+  @media (max-width: $mobileScreens) {
+    padding: 14px 60px;
   }
 }
 
