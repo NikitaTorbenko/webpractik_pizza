@@ -12,18 +12,21 @@
     line-height: 1.25;
     letter-spacing: 1px;
     margin-bottom: 55px;
-  }
 
-  &-types {
-    margin-bottom: 40px;
-  }
-
-  @media (max-width: $desctopScreens) {
-    &__title {
+    @media (max-width: $desctopScreens) {
       font-size: 40px;
       line-height: 1.5;
       margin-bottom: 20px;
     }
+
+    @media (max-width: $mobileScreens) {
+      font-size: 28px;
+      line-height: 1.25;
+    }
+  }
+
+  &-types {
+    margin-bottom: 40px;
   }
 
   @media (max-width: $desctopScreens) {

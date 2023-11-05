@@ -4,6 +4,8 @@ import { SelectMenu } from '../components/SelectMenu';
 import { pizzasApi } from '../redux';
 import { PizzaItem } from '../components/PizzaItem';
 import { menuItemsType } from '../types';
+import { useWindowSize } from '../hooks/useWindowSize';
+import { MobileSelectMenu } from '../components/MobileSelectMenu';
 
 const pizzaTypes: menuItemsType[] = [
   {
@@ -29,32 +31,35 @@ const pizzaTypes: menuItemsType[] = [
 ];
 
 export const ChoisePizzas = () => {
+  const dimensions = useWindowSize();
+
   const { data, isLoading, isError } = pizzasApi.useGetPizzasQuery();
   const [typePizza, setTypePizza] = useState(0);
 
-  console.log('typePizza', typePizza);
-  console.log('data', data);
-
   return (
-    <div className='container'>
+    <div style={{ height: 1000 }} className='container'>
       <div className='choise-pizzas'>
         <h2 className='choise-pizzas__title'>Выберите пиццу</h2>
-        <SelectMenu
-          setValue={setTypePizza}
-          className='choise-pizzas-types'
-          menuItems={pizzaTypes}
-          horizontalMargin={40}
-          initialActiveItem={0}
-        />
+        {dimensions.width >= 560 ? (
+          <SelectMenu
+            setValue={setTypePizza}
+            className='choise-pizzas-types'
+            menuItems={pizzaTypes}
+            horizontalMargin={40}
+            initialActiveItem={0}
+          />
+        ) : (
+          <MobileSelectMenu setValue={setTypePizza} menuItems={pizzaTypes} />
+        )}
         <div className='pizzas-list'>
           {isLoading && data && (
             <h2 style={{ textAlign: 'center' }}>Загрузка</h2>
           )}
           {isError && <h2 style={{ textAlign: 'center' }}>Произошла ошибка</h2>}
-          {data &&
+          {/* {data &&
             data
               .filter(el => (typePizza ? el.category + 1 === typePizza : el))
-              .map(el => <PizzaItem {...el} key={el.id} />)}
+              .map(el => <PizzaItem {...el} key={el.id} />)} */}
         </div>
       </div>
     </div>

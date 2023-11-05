@@ -1,0 +1,21 @@
+@import '../variables';
+
+.mobile-select-menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 44px;
+
+  &__item-icon {
+    width: 24px;
+    height: 24px;
+
+    &--active {
+      svg {
+        path {
+          fill: #e52d2d;
+        }
+      }
+    }
+  }
+}
