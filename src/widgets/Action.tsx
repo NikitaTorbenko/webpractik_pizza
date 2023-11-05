@@ -1,7 +1,7 @@
 import React from 'react';
-import action_1 from '../assets/img/action_1.jpg';
-import action_2 from '../assets/img/action_2.jpg';
-import action_3 from '../assets/img/action_3.jpg';
+import action_1 from '../assets/img/action/action_1.jpg';
+import action_2 from '../assets/img/action/action_2.jpg';
+import action_3 from '../assets/img/action/action_3.jpg';
 import { ActionItem } from '../components/ActionItem';
 import { IAction } from '../types';
 
