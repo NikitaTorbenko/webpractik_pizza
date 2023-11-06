@@ -9,8 +9,8 @@ export const Main = () => {
     <main className='main'>
       {/* <Action /> */}
       <ChoisePizzas />
-      {/* <DeliveryAndPayment />
-      <Process /> */}
+      <DeliveryAndPayment />
+      {/* <Process /> */}
     </main>
   );
 };

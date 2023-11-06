@@ -37,7 +37,7 @@ export const ChoisePizzas = () => {
   const [typePizza, setTypePizza] = useState(0);
 
   return (
-    <div style={{ height: 1000 }} className='container'>
+    <div className='container'>
       <div className='choise-pizzas'>
         <h2 className='choise-pizzas__title'>Выберите пиццу</h2>
         {dimensions.width >= 560 ? (

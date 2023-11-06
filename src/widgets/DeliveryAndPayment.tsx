@@ -37,6 +37,16 @@ export const DeliveryAndPayment = () => {
                 <div className='delivery-order-item__icon'>
                   <img src={el.icon} alt='' />
                 </div>
+                <div className='mobile-delivery-order-item-right'>
+                  <div className='mobile-delivery-order-item-right'>
+                    <h4 className='mobile-delivery-order-item-right__title'>
+                      {el.title}
+                    </h4>
+                    <div className='mobile-delivery-order-item-right__description'>
+                      {el.description}
+                    </div>
+                  </div>
+                </div>
                 <div className='delivery-order-item-right'>
                   <h4 className='delivery-order-item-right__title'>
                     {el.title}
