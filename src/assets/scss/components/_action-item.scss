@@ -1,0 +1,50 @@
+@import '../variables';
+
+.action {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+
+  &-item {
+    width: 416px;
+
+    &__img {
+      height: 247px;
+    }
+
+    &__title {
+      margin: 12px 0 14px;
+      font-feature-settings: 'clig' off, 'liga' off;
+      font-size: 24px;
+      font-weight: 800;
+      line-height: 1.25;
+    }
+
+    &__text {
+      font-feature-settings: 'clig' off, 'liga' off;
+      font-family: Roboto;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 1.5;
+    }
+  }
+
+  @media (max-width: $desctopScreens) {
+    &-item {
+      width: 236px;
+
+      &__img {
+        width: 236px;
+        height: 140px;
+      }
+
+      &__title {
+        font-size: 20px;
+      }
+
+      &__text {
+        font-size: 14px;
+      }
+    }
+  }
+}

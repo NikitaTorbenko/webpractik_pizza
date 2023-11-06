@@ -1,0 +1,62 @@
+@import '../variables';
+
+.choise-pizzas {
+  margin-top: 112px;
+  margin-bottom: 100px;
+
+  &__title {
+    text-align: center;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-size: 52px;
+    font-weight: 900;
+    line-height: 1.25;
+    letter-spacing: 1px;
+    margin-bottom: 55px;
+
+    @media (max-width: $desctopScreens) {
+      font-size: 40px;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+
+    @media (max-width: $mobileScreens) {
+      font-size: 28px;
+      line-height: 1.25;
+    }
+  }
+
+  &-types {
+    margin-bottom: 40px;
+  }
+
+  @media (max-width: $desctopScreens) {
+    margin-top: 80px;
+    margin-bottom: 80px;
+  }
+
+  @media (max-width: $mobileScreens) {
+    margin-bottom: 60px;
+  }
+}
+
+.pizzas-list {
+  display: grid;
+  // grid-template-columns: repeat(auto-fill, minmax(304px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  gap: 32px;
+
+  @media (max-width: $desctopScreens) {
+    display: grid;
+    // grid-template-columns: repeat(auto-fill, minmax(236px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (max-width: 830px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: $mobileScreens) {
+    grid-template-columns: 1fr;
+  }
+}

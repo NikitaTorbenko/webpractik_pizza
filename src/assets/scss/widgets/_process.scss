@@ -1,0 +1,116 @@
+@import '../variables';
+
+.process {
+  margin: 100px auto 112px;
+  max-width: 864px;
+  display: flex;
+  flex-direction: column;
+
+  &-item {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    max-width: fit-content;
+    width: 100%;
+    margin-bottom: 40px;
+
+    &:nth-child(even) {
+      display: flex;
+      flex-direction: row-reverse;
+      align-self: flex-end;
+
+      @media (max-width: $deliveryMobileScreens) {
+        display: flex;
+        flex-direction: row;
+        align-self: inherit;
+      }
+    }
+
+    &__img {
+      width: 304px;
+      height: 304px;
+      min-width: 304px;
+      min-height: 304px;
+
+      img {
+        border-radius: 42.76%;
+      }
+
+      @media (max-width: $desctopScreens) {
+        width: 250px;
+        height: 250px;
+        min-width: 250px;
+        min-height: 250px;
+      }
+
+      @media (max-width: $deliveryMobileScreens) {
+        width: 80px;
+        height: 80px;
+        min-width: 80px;
+        min-height: 80px;
+      }
+    }
+
+    &-info {
+      max-width: 416px;
+      width: 100%;
+    }
+
+    &__title {
+      margin-bottom: 12px;
+      font-feature-settings: 'clig' off, 'liga' off;
+      font-size: 32px;
+      font-weight: 800;
+      line-height: 1.25;
+
+      @media (max-width: $desctopScreens) {
+        font-size: 24px;
+      }
+
+      @media (max-width: $mobileScreens) {
+        font-size: 20px;
+        margin-bottom: 4px;
+      }
+    }
+
+    &__description {
+      font-feature-settings: 'clig' off, 'liga' off;
+      font-family: Roboto;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 1.5;
+
+      @media (max-width: $mobileScreens) {
+        font-size: 12px;
+      }
+    }
+
+    @media (max-width: $desctopScreens) {
+      gap: 37px;
+      margin-bottom: 12px;
+    }
+
+    @media (max-width: $deliveryMobileScreens) {
+      gap: 16px;
+      align-items: flex-start;
+      margin-bottom: 16px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  @media (max-width: $desctopScreens) {
+    margin: 80px auto;
+  }
+
+  @media (max-width: $deliveryMobileScreens) {
+    align-items: center;
+    margin: 20px auto 60px;
+  }
+
+  @media (max-width: $mobileScreens) {
+    margin: 20px auto;
+  }
+}

@@ -1,0 +1,156 @@
+@import '../variables';
+
+.mobile-pizza-item {
+  padding: 12.33px 8px 24px 12.33px;
+  position: relative;
+  background-color: $white;
+  box-shadow: 0px 2px 5px 0px rgba(165, 169, 176, 0.3);
+  border-radius: 5px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 13px;
+
+  &__category {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+
+    svg {
+      width: 12px;
+      height: 12px;
+    }
+  }
+
+  &-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 4px;
+  }
+
+  &__img {
+    border-radius: 50%;
+    width: 83.333px;
+    height: 83.333px;
+    background: url('../../img/SizePizza.png');
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &--0 {
+      width: 68px;
+      height: 68px;
+    }
+    &--1 {
+      width: 75px;
+      height: 75px;
+    }
+    &--2 {
+      width: 83.333px;
+      height: 83.333px;
+    }
+  }
+
+  &__title {
+    font-size: 18px;
+    font-weight: 800;
+  }
+
+  &__description {
+    color: $gray;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Roboto;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 1.5;
+    width: 172px;
+  }
+
+  &-size {
+    &__title {
+      text-align: center;
+      font-feature-settings: 'clig' off, 'liga' off;
+      font-family: Roboto;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 1.5;
+      margin-bottom: 4px;
+    }
+
+    &-item {
+      border-radius: 2px;
+      background-color: inherit;
+      width: 58px;
+      padding: 2px 0;
+      cursor: pointer;
+      text-align: center;
+
+      span {
+        font-family: Roboto;
+        font-size: 12px;
+        font-weight: 700;
+        z-index: 10;
+        position: relative;
+        line-height: 1.5;
+        color: #82909f;
+      }
+
+      &:hover {
+        span {
+          color: $black;
+        }
+      }
+
+      .active {
+        color: $black;
+      }
+
+      &-line {
+        border-radius: 2px;
+        position: absolute;
+        display: block;
+        height: 22px;
+        width: 58px;
+        top: 2px;
+        left: 2px;
+
+        background-color: $white;
+        color: $black;
+        transition: all 350ms ease;
+      }
+    }
+  }
+
+  &-sizes {
+    position: relative;
+    background-color: $blackGray;
+    padding: 2px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    transition: all 350ms ease;
+  }
+
+  &__price {
+    text-align: center;
+    font-family: Roboto;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.25;
+  }
+
+  &__order-btn {
+    margin-top: 12px;
+    font-family: Roboto;
+    padding: 4px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.25;
+    width: fit-content;
+    white-space: nowrap;
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "pizzas": [
+    {
+      "id": "0",
+      "imageUrl": "https://i.imgur.com/c2pxEyy.png",
+      "title": "Итальянская",
+      "description": "Томат, шампиньон, сыр, оливки, чили, соус, тесто, базилик",
+      "sizes": [20, 30, 40],
+      "price": [613, 723, 840],
+      "category": 0
+    },
+    {
+      "id": "1",
+      "imageUrl": "https://i.imgur.com/CdShgAg.png",
+      "title": "Маргарита",
+      "description": "Тесто со шпинатом, молодой сыр и колбаски, много колбасок",
+      "sizes": [20, 30, 40],
+      "price": [759, 846, 898],
+      "category": 2
+    },
+    {
+      "id": "2",
+      "imageUrl": "https://i.imgur.com/TksC5DT.png",
+      "title": "Барбекю",
+      "description": "Циплёнок (маленький кура), оливки, моцарелла, соус барбекю",
+      "sizes": [20, 30, 40],
+      "price": [611, 743, 900],
+      "category": 1
+    },
+    {
+      "id": "3",
+      "imageUrl": "https://i.imgur.com/Lfnf3v8.png",
+      "title": "Вегетарианская",
+      "description": "Томат, шампиньон, сыр, оливки, чили, соус, тесто, базилик",
+      "sizes": [20, 30, 40],
+      "price": [723, 854, 910],
+      "category": 3
+    },
+    {
+      "id": "4",
+      "imageUrl": "https://i.imgur.com/rACebzY.png",
+      "title": "Мясная",
+      "description": "Томат, шампиньон, сыр, оливки, чили, соус, тесто, базилик",
+      "sizes": [20, 30, 40],
+      "price": [453, 561, 755],
+      "category": 1
+    },
+    {
+      "id": "5",
+      "imageUrl": "https://i.imgur.com/Am89Ry9.png",
+      "title": "Овощная",
+      "description": "Тесто со шпинатом, молодой сыр и колбаски, много колбасок",
+      "sizes": [30, 40],
+      "price": [617, 749, 860],
+      "category": 3
+    },
+    {
+      "id": "6",
+      "imageUrl": "https://i.imgur.com/fvYdcJA.png",
+      "title": "Римская",
+      "description": "Циплёнок (маленький кура), оливки, моцарелла, соус барбекю",
+      "sizes": [20, 30, 40],
+      "price": [613, 800, 909],
+      "category": 0
+    },
+    {
+      "id": "7",
+      "imageUrl": "https://i.imgur.com/Tx5M5AK.png",
+      "title": "С грибами",
+      "description": "Томат, шампиньон, сыр, оливки, чили, соус, тесто, базилик",
+      "sizes": [20, 30, 40],
+      "price": [679, 782, 820],
+      "category": 3
+    },
+    {
+      "id": "8",
+      "imageUrl": "https://i.imgur.com/t9yGuON.png",
+      "title": "Сырная",
+      "description": "Томат, шампиньон, сыр, оливки, чили, соус, тесто, базилик",
+      "sizes": [20, 30, 40],
+      "price": [490, 629, 855],
+      "category": 2
+    },
+    {
+      "id": "9",
+      "imageUrl": "https://i.imgur.com/q2ZTwzo.png",
+      "title": "Четыре сыра",
+      "description": "Тесто со шпинатом, молодой сыр и колбаски, много колбасок",
+      "sizes": [20, 30, 40],
+      "price": [621, 691, 869],
+      "category": 2
+    },
+    {
+      "id": "10",
+      "imageUrl": "https://i.imgur.com/zu50lLu.png",
+      "title": "Пепперони Фреш",
+      "description": "Циплёнок (маленький кура), оливки, моцарелла, соус барбекю",
+      "sizes": [20, 30, 40],
+      "price": [621, 691, 869],
+      "category": 1
+    },
+    {
+      "id": "11",
+      "imageUrl": "https://i.imgur.com/MUFQdYu.png",
+      "title": "Ветчина и сыр",
+      "description": "Томат, шампиньон, сыр, оливки, чили, соус, тесто, базилик",
+      "sizes": [20, 30, 40],
+      "price": [621, 691, 869],
+      "category": 1
+    }
+  ]
+}
