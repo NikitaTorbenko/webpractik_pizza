@@ -7,7 +7,7 @@ import { Process } from './Process';
 export const Main = () => {
   return (
     <main className='main'>
-      {/* <Action /> */}
+      <Action />
       <ChoisePizzas />
       <DeliveryAndPayment />
       <Process />
