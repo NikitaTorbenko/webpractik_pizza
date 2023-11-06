@@ -460,6 +460,10 @@
       font-weight: 400;
       cursor: pointer;
 
+      &:active {
+        background-color: #e52d2d;
+      }
+
       &--disable {
         opacity: 0.5;
       }
@@ -469,6 +473,8 @@
   &-price {
     font-size: 18px;
     font-weight: 800;
+    width: 85px;
+    text-align: right;
 
     span {
       font-size: 24px;
