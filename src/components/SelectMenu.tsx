@@ -58,9 +58,7 @@ export const SelectMenu = ({
                 ? 'select-menu__item select-menu__item--active'
                 : 'select-menu__item'
             } ${
-              scroll && isMenu && scroll >= 156
-                ? 'select-menu__item--small'
-                : ''
+              scroll && isMenu && scroll > 156 ? 'select-menu__item--small' : ''
             }`}
           >
             {el.title}

@@ -20,14 +20,14 @@ export const Menu = ({ menuItems }: MenuProps) => {
   return (
     <div
       className={`menu ${
-        dimensions.width >= tableWidth && scroll >= 156 ? 'menu-active' : ''
+        dimensions.width > tableWidth && scroll > 156 ? 'menu-active' : ''
       }`}
     >
       <div className='container'>
         <div className='menu-inner'>
-          {dimensions.width >= tableWidth ? (
+          {dimensions.width > tableWidth ? (
             <LargeScreen menuItems={menuItems} />
-          ) : dimensions.width >= mobileWidth ? (
+          ) : dimensions.width > mobileWidth ? (
             <TabletScreen menuItems={menuItems} />
           ) : (
             <MobileScreen menuItems={menuItems} />

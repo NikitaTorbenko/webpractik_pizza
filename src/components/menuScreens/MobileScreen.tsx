@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import { useScroll } from '../../hooks/useScroll';
+import { useState } from 'react';
 import { ReactComponent as Phone } from '../../assets/icons/menu/Phone.svg';
 import { ReactComponent as CartIcon } from '../../assets/icons/menu/Cart.svg';
 import { ReactComponent as MenuIcon } from '../../assets/icons/menu/menuIcon.svg';
@@ -9,7 +8,6 @@ import { MenuProps } from '../../widgets/Menu';
 import { Cart } from '../../widgets/Cart';
 
 export const MobileScreen = ({ menuItems }: MenuProps) => {
-  const scroll = useScroll();
   const [isActiveBurger, setIsActiveBurger] = useState(false);
   const [isActiveCart, setIsActiveCart] = useState(false);
 

@@ -27,7 +27,7 @@ export const PizzaItem = (props: Pizza) => {
 
   return (
     <>
-      {dimensions.width >= 400 ? (
+      {dimensions.width > 400 ? (
         <div className='pizza-item'>
           <div className='pizza-item__category'>{pizzaIcon[category]}</div>
           <div className='pizza-item__img'>

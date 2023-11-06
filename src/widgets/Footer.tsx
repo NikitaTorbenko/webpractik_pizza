@@ -12,7 +12,7 @@ export const Footer = () => {
         <h2 className='footer__title'>Следите за нами в Instagram</h2>
         <h4 className='footer__subtitle'>@pizzamenu</h4>
       </div>
-      {dimensions.width >= 560 ? (
+      {dimensions.width > 560 ? (
         <div className='footer-bottom'>
           <div className='container footer-bottom-inner'>
             <div className='footer-bottom-left'>

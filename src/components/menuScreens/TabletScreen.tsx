@@ -37,7 +37,7 @@ export const TabletScreen = ({ menuItems }: MenuProps) => {
         <div className='tabletScreen-item'>
           <div
             className={`menu-lang ${
-              scroll >= 156 ? 'menu-lang-tablet--small' : ''
+              scroll > 156 ? 'menu-lang-tablet--small' : ''
             }`}
           >
             En

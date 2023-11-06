@@ -40,7 +40,7 @@ export const ChoisePizzas = () => {
     <div className='container'>
       <div className='choise-pizzas'>
         <h2 className='choise-pizzas__title'>Выберите пиццу</h2>
-        {dimensions.width >= 560 ? (
+        {dimensions.width > 560 ? (
           <SelectMenu
             setValue={setTypePizza}
             className='choise-pizzas-types'

@@ -26,7 +26,7 @@ export const Header = () => {
       <div className='header-background-image'>
         <img
           className='header-background-image__img'
-          src={dimensions.width >= 1380 ? headerImg : tabletHeaderImg}
+          src={dimensions.width > 1380 ? headerImg : tabletHeaderImg}
           alt=''
         />
       </div>

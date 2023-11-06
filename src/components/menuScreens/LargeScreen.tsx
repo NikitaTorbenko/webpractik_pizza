@@ -18,7 +18,7 @@ export const LargeScreen = ({ menuItems }: LargeScreenProps) => {
 
   return (
     <>
-      <Logo className={`${scroll >= 156 ? 'menu-logo' : ''}`} />
+      <Logo className={`${scroll > 156 ? 'menu-logo' : ''}`} />
       <SelectMenu
         isMenu
         className='menu-menu'
@@ -27,11 +27,11 @@ export const LargeScreen = ({ menuItems }: LargeScreenProps) => {
         initialActiveItem={1}
       />
       <div className='menu-phone'>
-        <Phone className={`${scroll >= 156 ? 'menu-icon' : ''}`} />
+        <Phone className={`${scroll > 156 ? 'menu-icon' : ''}`} />
         <div className='menu-phone-inner'>
           <div
             className={`menu-phone__number ${
-              scroll >= 156 ? 'menu-phone__number--small' : ''
+              scroll > 156 ? 'menu-phone__number--small' : ''
             }`}
           >
             +7 (918) 432-65-87
@@ -43,13 +43,13 @@ export const LargeScreen = ({ menuItems }: LargeScreenProps) => {
         {isActiveCart && <Cart setIsActive={setIsActiveCart} />}
 
         <div onClick={() => setIsActiveCart(true)} className='menu-cart-icon'>
-          <CartIcon className={`${scroll >= 156 ? 'menu-icon' : ''}`} />
+          <CartIcon className={`${scroll > 156 ? 'menu-icon' : ''}`} />
           <div className='menu-cart-icon__counter'>0</div>
         </div>
         <div className='menu-cart-inner'>
           <div
             className={`menu-cart__title ${
-              scroll >= 156 ? 'menu-cart__title--small' : ''
+              scroll > 156 ? 'menu-cart__title--small' : ''
             }`}
           >
             Ваш заказ
@@ -57,7 +57,7 @@ export const LargeScreen = ({ menuItems }: LargeScreenProps) => {
           <div className='menu-cart__subtitle'>Итальянская и ещё 2 пиццы</div>
         </div>
       </div>
-      <div className={`menu-lang ${scroll >= 156 ? 'menu-lang--small' : ''}`}>
+      <div className={`menu-lang ${scroll > 156 ? 'menu-lang--small' : ''}`}>
         En
       </div>
     </>
