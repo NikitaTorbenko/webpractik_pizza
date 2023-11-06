@@ -10,7 +10,7 @@ export const Main = () => {
       {/* <Action /> */}
       <ChoisePizzas />
       <DeliveryAndPayment />
-      {/* <Process /> */}
+      <Process />
     </main>
   );
 };
